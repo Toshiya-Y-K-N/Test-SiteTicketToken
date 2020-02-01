@@ -106,21 +106,7 @@ contract MyToken is ERC20Mintable, ERC20Burnable, ERC20Detailed {
     }
 
 ////////////////////////////////////////////////////////////////    
-    //Creator Data Section
-    function creatorNameOnlyMinter() public view onlyMinter returns (string memory) {
-        return _creatorName;
-    }    
-    function creatorContactOnlyMinter() public view onlyMinter returns (string memory) {
-        return _creatorContact;
-    }  
-    function creatorContactOnlyCreator() public view returns (string memory) {
-        require(msg.sender == _creatorAddress);
-        return _creatorContact;
-    } 
-    function creatorDataOnlyCreator() public view returns (string memory) {
-        require(msg.sender == _creatorAddress);
-        return _creatorData;
-    }
+    //Creator Data Section　省略
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
     constructor()
